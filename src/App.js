@@ -1,4 +1,5 @@
-import JSXComponent from "./JSXComponent";
+import JSXComponent from "./components/JSXComponent";
+import Parent from "./components/ParentProp.component";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="App-header">
         <h1>Hello World</h1>
         <JSXComponent />
+        <Parent />
       </header>
     </div>
   );
