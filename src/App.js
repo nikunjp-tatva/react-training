@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <h1>Hello World</h1>
         <JSXComponent />
-        <Parent />
+        <Parent name="Test2" age= "44" city="Rajkot" />
       </header>
     </div>
   );

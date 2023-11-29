@@ -1,10 +1,11 @@
 import React from 'react';
 import Child from './ChildProp.component';
 
-const Parent = () => {
+const Parent = (props) => {
   return (
     <div>
-      <Child name="Test" age= "33" city="N/A" />
+      <Child name="Test1" age= "33" city="Ahmedabad" />
+      <Child name={props.name} age={props.age} city={props.city} />
     </div>
   );
 };
