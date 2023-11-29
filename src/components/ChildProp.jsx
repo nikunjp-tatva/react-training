@@ -1,6 +1,6 @@
 import React from "react";
 
-const Child = (props) => {
+const ChildProp = (props) => {
   return (
     <div>
       <h4> Name: {props.name}</h4>
@@ -10,4 +10,4 @@ const Child = (props) => {
   );
 };
 
-export default Child;
+export default ChildProp;

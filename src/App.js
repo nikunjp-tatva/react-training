@@ -1,6 +1,6 @@
 import JSXComponent from "./components/JSXComponent";
-import Parent from "./components/ParentProp.component";
-import State from "./components/State.component";
+import ParentProp from "./components/ParentProp";
+import State from "./components/State";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <h1>Hello World</h1>
         <JSXComponent />
-        <Parent name="Test2" age= "44" city="Rajkot" />
+        <ParentProp name="Test2" age= "44" city="Rajkot" />
         <State />
       </header>
     </div>
