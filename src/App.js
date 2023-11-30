@@ -2,6 +2,7 @@ import Parent from "./components/class/Parent";
 import StateClass from "./components/class/StateClass";
 import JSXComponent from "./components/functional/JSXComponent";
 import ParentProp from "./components/functional/ParentProp";
+import PassState from "./components/functional/PassState";
 import State from "./components/functional/State";
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         <State />
         <h4>Counter using Class Component</h4>
         <StateClass />
+        <h4>Counter using Pass state from parent to child</h4>
+        <PassState />
       </header>
     </div>
   );

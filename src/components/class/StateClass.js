@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-class StateClass extends React.Component {
+class StateClass extends Component {
   constructor() {
     super();
     this.state = { counter: 0 };
