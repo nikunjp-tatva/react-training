@@ -4,6 +4,7 @@ import StateClass from "./components/class/StateClass";
 import JSXComponent from "./components/functional/JSXComponent";
 import ParentProp from "./components/functional/ParentProp";
 import PassState from "./components/functional/PassState";
+import PassState2 from "./components/functional/PassState2";
 import State from "./components/functional/State";
 
 function App() {
@@ -13,15 +14,17 @@ function App() {
         <h1>React App</h1>
         <JSXComponent />
         <h4>Using Function Component</h4>
-        <ParentProp name="Test2" age= "44" city="Rajkot" />
+        <ParentProp name="Test2" age="44" city="Rajkot" />
         <h4>Using Class Component</h4>
-        <Parent name="Test4" age= "11" city="Surat" />
+        <Parent name="Test4" age="11" city="Surat" />
         <h4>Counter using Function Component</h4>
         <State />
         <h4>Counter using Class Component</h4>
         <StateClass />
         <h4>Counter using Pass state from parent to child</h4>
         <PassState />
+        <h4>Counter using Pass state from parent to child Pass only state</h4>
+        <PassState2 />
         <h4>Class Component LifeCycle Mounting </h4>
         <LifeCycle />
       </header>
