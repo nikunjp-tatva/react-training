@@ -1,3 +1,4 @@
+import LifeCycle from "./components/class/LifeCycle";
 import Parent from "./components/class/Parent";
 import StateClass from "./components/class/StateClass";
 import JSXComponent from "./components/functional/JSXComponent";
@@ -21,6 +22,8 @@ function App() {
         <StateClass />
         <h4>Counter using Pass state from parent to child</h4>
         <PassState />
+        <h4>Class Component LifeCycle Mounting </h4>
+        <LifeCycle />
       </header>
     </div>
   );
