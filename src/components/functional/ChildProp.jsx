@@ -3,9 +3,9 @@ import React from "react";
 const ChildProp = (props) => {
   return (
     <div>
-      <h4> Name: {props.name}</h4>
-      <h4> Age: {props.age}</h4>
-      <h4> City: {props.city}</h4>
+      <p> Name: {props.name}</p>
+      <p> Age: {props.age}</p>
+      <p> City: {props.city}</p>
     </div>
   );
 };
