@@ -4,13 +4,20 @@ const State = () => {
   const [value, setValue] = React.useState(0);
   return (
     <div>
-      <p>{value} time clicked</p>
+      <p>Total: {value}</p>
       <button
         onClick={() => {
           setValue(value + 1);
         }}
       >
-        Click
+        Plus
+      </button>
+      <button
+        onClick={() => {
+          setValue(value? value - 1 : value);
+        }}
+      >
+        Minus
       </button>
     </div>
   );
