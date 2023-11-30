@@ -1,6 +1,6 @@
-import JSXComponent from "./components/JSXComponent";
-import ParentProp from "./components/ParentProp";
-import State from "./components/State";
+import JSXComponent from "./components/functional/JSXComponent";
+import ParentProp from "./components/functional/ParentProp";
+import State from "./components/functional/State";
 
 function App() {
   return (
