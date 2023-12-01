@@ -2,6 +2,7 @@ import LifeCycle from "./components/class/LifeCycle";
 import Parent from "./components/class/Parent";
 import StateClass from "./components/class/StateClass";
 import JSXComponent from "./components/functional/JSXComponent";
+import LifeCycle1 from "./components/functional/LifeCycle1";
 import ParentProp from "./components/functional/ParentProp";
 import PassState from "./components/functional/PassState";
 import PassState2 from "./components/functional/PassState2";
@@ -27,6 +28,8 @@ function App() {
         <PassState2 />
         <h4>Class Component LifeCycle Mounting </h4>
         <LifeCycle />
+        <h4>Function Component LifeCycle Mounting </h4>
+        <LifeCycle1 />
       </header>
     </div>
   );
