@@ -1,37 +1,26 @@
-import LifeCycle from "./components/class/LifeCycle";
-import Parent from "./components/class/Parent";
-import StateClass from "./components/class/StateClass";
-import JSXComponent from "./components/functional/JSXComponent";
-import LifeCycle1 from "./components/functional/LifeCycle1";
-import ParentProp from "./components/functional/ParentProp";
-import PassState from "./components/functional/PassState";
-import PassState2 from "./components/functional/PassState2";
-import State from "./components/functional/State";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import EX5 from "./pages/EX5";
+import Home from "./pages/Home";
+import Functional from "./pages/Functional";
+import Class from "./pages/Class";
+import StateProps from "./pages/StateProps";
+import NavBar from "./components/functional/NavBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>React App</h1>
-        <JSXComponent />
-        <h4>Using Function Component</h4>
-        <ParentProp name="Test2" age="44" city="Rajkot" />
-        <h4>Using Class Component</h4>
-        <Parent name="Test4" age="11" city="Surat" />
-        <h4>Counter using Function Component</h4>
-        <State />
-        <h4>Counter using Class Component</h4>
-        <StateClass />
-        <h4>Counter using Pass state from parent to child</h4>
-        <PassState />
-        <h4>Counter using Pass state from parent to child Pass only state</h4>
-        <PassState2 />
-        <h4>Class Component LifeCycle Mounting </h4>
-        <LifeCycle />
-        <h4>Function Component LifeCycle Mounting </h4>
-        <LifeCycle1 />
-      </header>
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/functional" element={< Functional />} />
+          <Route path="/class" element={< Class />} />
+          <Route path="/state-props" element={< StateProps />} />
+          <Route path="/ex-5" element={< EX5 />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
