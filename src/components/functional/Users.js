@@ -5,16 +5,15 @@ import constant from "../../constant";
 import UserTable from "../shared/UserTable";
 
 export default function Users() {
-  const [data, setData] = useState({
-    isLoading: false,
-    users: [],
-  });
+  const [loading, setLoading] = useState(false);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    setData((prev) => ({ ...prev, isLoading: true }));
+    setLoading(true);
     axios.get(constant.fakeUserApiUrl).then((response) => {
       const data = response.data;
-      setData({ isLoading: false, users: data });
+      setLoading(false);
+      setUsers(data);
     });
   }, []);
 
@@ -24,11 +23,7 @@ export default function Users() {
         <h1>Users Details</h1>
       </div>
       <div>
-        {data.isLoading ? (
-          "Fetching data from API"
-        ) : (
-          <UserTable users={data.users} />
-        )}
+        {loading ? "Fetching data from API" : <UserTable users={users} />}
       </div>
     </>
   );

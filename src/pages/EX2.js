@@ -4,11 +4,9 @@ import React, { useEffect, useState } from "react";
 import UserTable from "../components/shared/UserTable";
 
 export default function EX2() {
-  const [data, setData] = useState({
-    isLoading: false,
-    users: [],
-  });
-  const [users, setUsers] = useState(data.users);
+  const [loading, setLoading] = useState(false);
+  const [users, setUsers] = useState([]);
+  const [filteredUsers, setFilteredUsers] = useState(users);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleChange = (event) => {
@@ -17,22 +15,23 @@ export default function EX2() {
   };
 
   const filterUsers = (query) => {
-    const filteredUsers = data.users.filter((user) => {
+    const filteredUsersDetails = filteredUsers.filter((user) => {
       return (
         user.name.toLowerCase().includes(query.toLowerCase()) ||
         user.username.toLowerCase().includes(query.toLowerCase()) ||
         user.email.toLowerCase().includes(query.toLowerCase())
       );
     });
-    setUsers(filteredUsers);
+    setUsers(filteredUsersDetails);
   };
 
   useEffect(() => {
-    setData((prev) => ({ ...prev, isLoading: true }));
+    setLoading(true);
     const apiUrl = `https://jsonplaceholder.typicode.com/users`;
     axios.get(apiUrl).then((response) => {
       const data = response.data;
-      setData({ isLoading: false, users: data });
+      setLoading(false);
+      setFilteredUsers(data);
       setUsers(data);
     });
   }, []);
@@ -50,11 +49,7 @@ export default function EX2() {
         onChange={handleChange}
       />
       <div>
-        {data.isLoading ? (
-          "Fetching data from API"
-        ) : (
-          <UserTable users={users} />
-        )}
+        {loading ? "Fetching data from API" : <UserTable users={users} />}
       </div>
     </>
   );
