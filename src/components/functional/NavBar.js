@@ -10,6 +10,8 @@ const NavBar = () => {
         <li><Link to="/class">Class Component</Link></li>
         <li><Link to="/state-props">State-Props</Link></li>
         <li><Link to="/ex-5">Exercise</Link></li>
+        <li><Link to="/userDetails">User Details</Link></li>
+        <li><Link to="/ex-2">Exercise 2</Link></li>
       </ul>
     </nav>
   );

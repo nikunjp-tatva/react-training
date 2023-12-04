@@ -6,6 +6,8 @@ import Functional from "./pages/Functional";
 import Class from "./pages/Class";
 import StateProps from "./pages/StateProps";
 import NavBar from "./components/functional/NavBar";
+import UserDetails from "./pages/UserDetails";
+import EX2 from "./pages/EX2";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/class" element={< Class />} />
           <Route path="/state-props" element={< StateProps />} />
           <Route path="/ex-5" element={< EX5 />} />
+          <Route path="/userDetails" element={< UserDetails />} />
+          <Route path="/ex-2" element={< EX2 />} />
         </Routes>
       </div>
     </Router>
