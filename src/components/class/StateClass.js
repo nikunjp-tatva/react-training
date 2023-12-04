@@ -6,7 +6,7 @@ class StateClass extends Component {
     this.state = { counter: 0 };
   }
 
-  incrementCounter = () => {
+  handleIncrementCounterButton = () => {
     this.setState((prev) => {
       return {
         counter: prev.counter + 1,
@@ -14,7 +14,7 @@ class StateClass extends Component {
     });
   }
 
-  decrementCounter = () => {
+  handleDecrementCounterButton = () => {
     this.setState((prev) => {
       return {
         counter: prev.counter ? prev.counter - 1 : prev.counter,
@@ -26,8 +26,8 @@ class StateClass extends Component {
     return (
       <div>
         <p>Counter: {this.state.counter}</p>
-        <button onClick={this.incrementCounter}>Increment</button>
-        <button onClick={this.decrementCounter}>Decrement</button>
+        <button onClick={this.handleIncrementCounterButton}>Increment</button>
+        <button onClick={this.handleDecrementCounterButton}>Decrement</button>
       </div>
     );
   }

@@ -2,11 +2,11 @@ import react, { useEffect, useState } from "react";
 
 const Counter = () => {
   const [count, setCount] = useState(1);
-  const incrementCount = () => {
+  const handleIncrementCountButton = () => {
     setCount((prev) => prev + 1);
   };
 
-  const decrementCount = () => {
+  const handleDecrementCountButton = () => {
     setCount((prev) => (prev ? prev - 1 : prev));
   };
 
@@ -29,8 +29,8 @@ const Counter = () => {
     <>
       <h4>Count Value: {count}</h4>{" "}
       <div>
-        <button onClick={incrementCount}>Increment</button>{" "}
-        <button onClick={decrementCount}>Decrement</button>
+        <button onClick={handleIncrementCountButton}>Increment</button>{" "}
+        <button onClick={handleDecrementCountButton}>Decrement</button>
       </div>
     </>
   );
@@ -38,13 +38,13 @@ const Counter = () => {
 const LifeCycle1 = () => {
   const [visibility, setVisibility] = useState(false);
 
-  const changeVisibility = () => {
+  const handleChangeVisibilityButton = () => {
     setVisibility((prev) => !prev);
   };
 
   return (
     <>
-      <button onClick={changeVisibility}>
+      <button onClick={handleChangeVisibilityButton}>
         {visibility ? "Hide Counter" : "Show Counter"}
       </button>
       {visibility && <Counter />}
