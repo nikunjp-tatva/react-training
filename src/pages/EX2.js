@@ -1,33 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-function UserData({ users }) {
-  return (
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Username</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        {users.map((user) => (
-          <tr key={user.id}>
-            <td>{user.id}</td>
-            <td>{user.username}</td>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{user.phone}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-}
+import UserTable from "../components/shared/UserTable";
 
 export default function EX2() {
   const [data, setData] = useState({
@@ -76,7 +50,11 @@ export default function EX2() {
         onChange={handleChange}
       />
       <div>
-        {data.isLoading ? "Fetching data from API" : <UserData users={users} />}
+        {data.isLoading ? (
+          "Fetching data from API"
+        ) : (
+          <UserTable users={users} />
+        )}
       </div>
     </>
   );

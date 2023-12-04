@@ -1,33 +1,7 @@
 import React, { Component } from "react";
 
-import { fakeTodoApiUrl } from "../../constant"
-
-class GetData extends Component {
-  render() {
-    return (
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>User Id</th>
-            <th>Title</th>
-            <th>Completed</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.todos.map((todo) => (
-            <tr key={todo.id}>
-              <td>{todo.id}</td>
-              <td>{todo.userId}</td>
-              <td>{todo.title}</td>
-              <td>{String(todo.completed)}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    );
-  }
-}
+import constant from "../../constant"
+import TodoTable from "../shared/TodoTable";
 
 export default class Todo extends Component {
   constructor() {
@@ -39,7 +13,7 @@ export default class Todo extends Component {
   }
 
   componentDidMount = () => {
-    fetch(fakeTodoApiUrl)
+    fetch(constant.fakeTodoApiUrl)
       .then((response) => response.json())
       .then((data) => this.setState({ todo: data, isLoading: false }));
   };
@@ -54,7 +28,7 @@ export default class Todo extends Component {
           {this.state.isLoading ? (
             "Fetching data from API"
           ) : (
-            <GetData todos={this.state.todo} />
+            <TodoTable todos={this.state.todo} />
           )}
         </div>
       </>
