@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { fakeTodoApiUrl } from "../../constant"
+
 class GetData extends Component {
   render() {
     return (
@@ -37,8 +39,7 @@ export default class Todo extends Component {
   }
 
   componentDidMount = () => {
-    const apiUrl = "https://jsonplaceholder.typicode.com/users/1/todos";
-    fetch(apiUrl)
+    fetch(fakeTodoApiUrl)
       .then((response) => response.json())
       .then((data) => this.setState({ todo: data, isLoading: false }));
   };

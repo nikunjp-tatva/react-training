@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
+import { fakeUserApiUrl } from "../../constant"
+
 function GetData({ users }) {
   return (
     <table>
@@ -37,8 +39,7 @@ export default function Users() {
 
   useEffect(() => {
     setData((prev) => ({ ...prev, isLoading: true }));
-    const apiUrl = `https://jsonplaceholder.typicode.com/users`;
-    axios.get(apiUrl).then((response) => {
+    axios.get(fakeUserApiUrl).then((response) => {
       const data = response.data;
       setData({ isLoading: false, users: data });
     });
