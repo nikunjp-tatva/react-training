@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import constant from "../../constant"
+import constant from "../../constant";
 import TodoTable from "../shared/TodoTable";
 
 export default class Todo extends Component {

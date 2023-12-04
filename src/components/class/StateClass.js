@@ -12,7 +12,7 @@ class StateClass extends Component {
         counter: prev.counter + 1,
       };
     });
-  }
+  };
 
   handleDecrementCounterButton = () => {
     this.setState((prev) => {
@@ -20,7 +20,7 @@ class StateClass extends Component {
         counter: prev.counter ? prev.counter - 1 : prev.counter,
       };
     });
-  }
+  };
 
   render() {
     return (

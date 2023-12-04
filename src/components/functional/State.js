@@ -14,7 +14,7 @@ const State = () => {
       </button>
       <button
         onClick={() => {
-          setValue(value? value - 1 : value);
+          setValue(value ? value - 1 : value);
         }}
       >
         Decrement

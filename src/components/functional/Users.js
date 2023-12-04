@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import constant from "../../constant"
+import constant from "../../constant";
 import UserTable from "../shared/UserTable";
 
 export default function Users() {

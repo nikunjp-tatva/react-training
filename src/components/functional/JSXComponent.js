@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const JSXComponent = () => {
-    const string = 'Using JSX!'
+  const string = "Using JSX!";
   return (
     <div>
       <p>{string}</p>

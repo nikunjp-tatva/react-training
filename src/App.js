@@ -16,12 +16,12 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/functional" element={< Functional />} />
-          <Route path="/class" element={< Class />} />
-          <Route path="/state-props" element={< StateProps />} />
-          <Route path="/ex-5" element={< EX5 />} />
-          <Route path="/userDetails" element={< UserDetails />} />
-          <Route path="/ex-2" element={< EX2 />} />
+          <Route path="/functional" element={<Functional />} />
+          <Route path="/class" element={<Class />} />
+          <Route path="/state-props" element={<StateProps />} />
+          <Route path="/ex-5" element={<EX5 />} />
+          <Route path="/userDetails" element={<UserDetails />} />
+          <Route path="/ex-2" element={<EX2 />} />
         </Routes>
       </div>
     </Router>

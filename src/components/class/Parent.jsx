@@ -6,7 +6,11 @@ class Parent extends Component {
     return (
       <div>
         <Child name="Test3" age="22" city="Vadodara" />
-        <Child name={this.props.name} age={this.props.age} city={this.props.city} />
+        <Child
+          name={this.props.name}
+          age={this.props.age}
+          city={this.props.city}
+        />
       </div>
     );
   }
