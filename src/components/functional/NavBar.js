@@ -24,10 +24,13 @@ const NavBar = () => {
           <Link to="/userDetails">User Details</Link>
         </li>
         <li>
-          <Link to="/ex-2">Exercise 2</Link>
+          <Link to="/ex-2.1">Exercise 2.1</Link>
         </li>
         <li>
           <Link to="/form">Simple Form</Link>
+        </li>
+        <li>
+          <Link to="/ex-2.2">Exercise 2.2</Link>
         </li>
       </ul>
     </nav>

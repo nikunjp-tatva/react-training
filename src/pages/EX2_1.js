@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import UserTable from "../components/shared/UserTable";
 
-export default function EX2() {
+export default function EX2_1() {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState(users);
