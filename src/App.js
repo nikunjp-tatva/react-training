@@ -8,7 +8,7 @@ import StateProps from "./pages/StateProps";
 import NavBar from "./components/functional/NavBar";
 import UserDetails from "./pages/UserDetails";
 import EX2 from "./pages/EX2";
-import FormComponent from "./components/functional/FormComponent";
+import FormComponent from "./components/form/FormComponent";
 
 function App() {
   return (
