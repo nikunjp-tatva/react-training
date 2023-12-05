@@ -8,6 +8,7 @@ import StateProps from "./pages/StateProps";
 import NavBar from "./components/functional/NavBar";
 import UserDetails from "./pages/UserDetails";
 import EX2 from "./pages/EX2";
+import FormComponent from "./components/functional/FormComponent";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/ex-5" element={<EX5 />} />
           <Route path="/userDetails" element={<UserDetails />} />
           <Route path="/ex-2" element={<EX2 />} />
+          <Route path="/form" element={<FormComponent />} />
         </Routes>
       </div>
     </Router>

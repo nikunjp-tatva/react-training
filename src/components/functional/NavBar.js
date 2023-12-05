@@ -26,6 +26,9 @@ const NavBar = () => {
         <li>
           <Link to="/ex-2">Exercise 2</Link>
         </li>
+        <li>
+          <Link to="/form">Simple Form</Link>
+        </li>
       </ul>
     </nav>
   );
