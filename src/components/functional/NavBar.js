@@ -32,6 +32,9 @@ const NavBar = () => {
         <li>
           <Link to="/ex-2.2">Exercise 2.2</Link>
         </li>
+        <li>
+          <Link to="/global-store">Global Store</Link>
+        </li>
       </ul>
     </nav>
   );
