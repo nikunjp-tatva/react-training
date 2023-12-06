@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -25,15 +25,17 @@ const initialValues = {
   phoneNumber: "",
 };
 
-const onSubmit = (values, action) => {
-  console.log(values);
-  action.resetForm();
-};
 const FormikForm = () => {
+  const [formData, setFormData] = useState(initialValues);
+  const onSubmit = (values, action) => {
+    setFormData(values);
+    console.log(action);
+    action.resetForm();
+  };
   return (
     <>
       <Formik
-        initialValues={initialValues}
+        initialValues={formData}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
       >
@@ -104,6 +106,13 @@ const FormikForm = () => {
           </Form>
         )}
       </Formik>
+      <div>
+        {formData.name && <p>Name: {formData.name}</p>}
+        {formData.email && <p>Email: {formData.email}</p>}
+        {formData.phoneNumber && <p>Phone number: {formData.phoneNumber}</p>}
+        {formData.age && <p>Age: {formData.age}</p>}
+        {formData.gender && <p>Gender: {formData.gender}</p>}
+      </div>
     </>
   );
 };
