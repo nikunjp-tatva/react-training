@@ -6,7 +6,7 @@ export default function Store() {
   const { theme, setTheme } = useContext(GlobalContext);
   return (
     <>
-      <div>Theme: {theme}</div>
+      <p>Using Context Current Theme: <b>{theme}</b> </p>
       <button
         onClick={() => {
           setTheme((theme) => (theme === "light" ? "dark" : "light"));
