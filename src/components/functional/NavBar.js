@@ -37,6 +37,9 @@ const NavBar = () => {
         </li>
         <li>
           <Link to="/redux-store">Redux Store</Link>
+        <li>
+          <Link to="/ex-3.3">Exercise 3.3</Link>
+        </li>
         </li>
       </ul>
     </nav>
