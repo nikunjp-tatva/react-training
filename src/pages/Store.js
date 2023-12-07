@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { GlobalContext } from "../GlobalContext";
+import { GlobalContext } from "../components/contexts/GlobalContext";
 
 export default function Store() {
   const { theme, setTheme } = useContext(GlobalContext);
