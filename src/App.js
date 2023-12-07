@@ -19,10 +19,10 @@ import ReduxStore from "./pages/ReduxStore";
 
 function App() {
   const [theme, setTheme] = useState("dark");
-  const obj = useMemo(() => ({ theme, setTheme }), [theme]);
+  const globalContext = useMemo(() => ({ theme, setTheme }), [theme]);
   return (
     <Provider store={store}>
-      <GlobalContext.Provider value={obj}>
+      <GlobalContext.Provider value={globalContext}>
         <Router>
           <div>
             <NavBar />

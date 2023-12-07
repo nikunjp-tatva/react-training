@@ -8,8 +8,6 @@ export const themeSlice = createSlice({
   },
 });
 
-// this is for dispatch
 export const { changeTheme } = themeSlice.actions;
 
-// this is for configureStore
 export default themeSlice.reducer;
