@@ -41,6 +41,9 @@ const NavBar = () => {
           <Link to="/ex-3.3">Exercise 3.3</Link>
         </li>
         </li>
+        <li>
+          <Link to="/higher-order-component">Higher Order Component</Link>
+        </li>
       </ul>
     </nav>
   );

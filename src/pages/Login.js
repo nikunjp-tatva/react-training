@@ -13,7 +13,7 @@ const Login = () => {
         <>
           <div>
             <p>
-              Welcome <b>{loggedInUserDetails.name}</b>
+              Welcome <b>{loggedInUserDetails?.name}</b>
             </p>
             <button onClick={logout}>Log Out</button>
           </div>

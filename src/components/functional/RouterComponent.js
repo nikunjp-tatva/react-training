@@ -13,6 +13,7 @@ import FormComponent from "../form/FormComponent";
 import EX2_2 from "../../pages/EX2_2";
 import Store from "../../pages/Store";
 import ReduxStore from "../../pages/ReduxStore";
+import HRC from "./HRC";
 import EX3_3 from "../../pages/EX3_3";
 
 export default function RouterComponent() {
@@ -33,6 +34,7 @@ export default function RouterComponent() {
           <Route path="/global-store" element={<Store />} />
           <Route path="/redux-store" element={<ReduxStore />} />
           <Route path="/ex-3.3" element={<EX3_3 />} />
+          <Route path="/higher-order-component" element={<HRC />} />
         </Routes>
       </div>
     </Router>
