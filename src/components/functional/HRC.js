@@ -7,7 +7,7 @@ const getProducts = async (query) => {
   try {
     const response = await axios
       .get(constant.fakeProductApiUrl, { params: { q: query } });
-    return response.data;
+    return response?.data;
   } catch (error) {
     console.error("Error fetching products:", error);
     return [];
