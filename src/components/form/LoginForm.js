@@ -43,7 +43,7 @@ const LoginForm = (props) => {
         <Form>
         <div>
             <label htmlFor="name"> &nbsp; <b>Name:</b> &nbsp;</label>
-            <Field type="text" name="name" placeHolder="Enter your name"/>
+            <Field type="text" name="name" placeholder="Enter your name"/>
             <ErrorMessage
               name="name"
               component="div"
@@ -55,7 +55,7 @@ const LoginForm = (props) => {
             <label htmlFor="email">
               &nbsp; <b>Email:</b> &nbsp;
             </label>
-            <Field type="email" name="email" placeHolder="Enter above email"/>
+            <Field type="email" name="email" placeholder="Enter above email"/>
             <ErrorMessage
               name="email"
               component="div"
@@ -67,7 +67,7 @@ const LoginForm = (props) => {
             <label htmlFor="password">
               &nbsp; <b>Password:</b> &nbsp;
             </label>
-            <Field type="password" name="password" placeHolder="Enter above password"/>
+            <Field type="password" name="password" placeholder="Enter above password"/>
             <ErrorMessage
               name="password"
               component="div"
