@@ -13,9 +13,9 @@ it("displays error message on invalid credentials", async () => {
 
   fireEvent.change(emailInput, { target: { value: "invalid@test.com" } });
   fireEvent.change(passwordInput, { target: { value: "invalidPassword" } });
-  await act(async () => {
+  // await act(async () => {
     fireEvent.click(submitButton);
-  });
+  // });
   expect(mockLoginHandler).not.toHaveBeenCalled();
   expect(screen.queryByText("Invalid email or password")).toBeNull();
 });

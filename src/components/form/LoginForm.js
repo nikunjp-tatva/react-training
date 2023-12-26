@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import "./LoginForm.css";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
@@ -17,7 +18,6 @@ const initialValues = {
 };
 
 const LoginForm = (props) => {
-
   const onSubmit = (values, action) => {
     const { email, password } = values;
     if (email !== "admin@test.com" || password !== "Admin@123") {
@@ -29,53 +29,57 @@ const LoginForm = (props) => {
   };
   return (
     <>
-      <p>
-        Demo Email: <b>admin@test.com</b>
-      </p>
-      <p>
-        Demo Password: <b>Admin@123</b>
-      </p>
+    <h1><center>Login Form</center></h1>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={onSubmit}
       >
-        <Form>
-        <div>
-            <label htmlFor="name"> &nbsp; <b>Name:</b> &nbsp;</label>
-            <Field type="text" name="name" placeholder="Enter your name"/>
-            <ErrorMessage
+        <Form className="form-login">
+          <div>
+            <label htmlFor="name" className="form-label">
+              <b>Name:</b>
+            </label>
+            <Field
+              className="form-input"
+              type="text"
               name="name"
-              component="div"
-              style={{ color: "red" }}
+              placeholder="Enter your name"
             />
+            <ErrorMessage name="name" component="div" className="form-error" />
           </div>
 
           <div>
-            <label htmlFor="email">
-              &nbsp; <b>Email:</b> &nbsp;
+            <label htmlFor="email" className="form-label">
+              <b>Email: </b> (admin@test.com)
             </label>
-            <Field type="email" name="email" placeholder="Enter above email"/>
-            <ErrorMessage
+            <Field
+              className="form-input"
+              type="email"
               name="email"
-              component="div"
-              style={{ color: "red" }}
-            />
+              placeholder="Enter above email"
+              />
+            <ErrorMessage name="email" component="div" className="form-error" />
           </div>
 
           <div>
-            <label htmlFor="password">
-              &nbsp; <b>Password:</b> &nbsp;
+            <label htmlFor="password" className="form-label">
+              <b>Password: </b> (Admin@123)
             </label>
-            <Field type="password" name="password" placeholder="Enter above password"/>
+            <Field
+              className="form-input"
+              type="password"
+              name="password"
+              placeholder="Enter above password"
+            />
             <ErrorMessage
               name="password"
               component="div"
-              style={{ color: "red" }}
+              className="form-error"
             />
           </div>
 
-          <button type="submit"> Login</button>
+          <button className="form-button" type="submit"> Login</button>
         </Form>
       </Formik>
     </>

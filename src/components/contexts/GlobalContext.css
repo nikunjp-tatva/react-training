@@ -1,0 +1,21 @@
+.theme-toggle-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggle-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for the toggle button in dark mode */
+.theme-toggle-button.dark-mode {
+  background-color: #fff;
+  color: #333;
+}

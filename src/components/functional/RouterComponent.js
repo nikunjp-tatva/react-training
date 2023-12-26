@@ -23,18 +23,18 @@ export default function RouterComponent() {
         <NavBar />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/functional" element={<Functional />} />
-          <Route path="/class" element={<Class />} />
           <Route path="/state-props" element={<StateProps />} />
-          <Route path="/ex-5" element={<EX5 />} />
           <Route path="/userDetails" element={<UserDetails />} />
-          <Route path="/ex-2.1" element={<EX2_1 />} />
           <Route path="/form" element={<FormComponent />} />
-          <Route path="/ex-2.2" element={<EX2_2 />} />
-          <Route path="/global-store" element={<Store />} />
-          <Route path="/redux-store" element={<ReduxStore />} />
-          <Route path="/ex-3.3" element={<EX3_3 />} />
-          <Route path="/higher-order-component" element={<HRC />} />
+          <Route path="/components/functional" element={<Functional />} />
+          <Route path="/components/class" element={<Class />} />
+          <Route path="/components/higher-order" element={<HRC />} />
+          <Route path="/exercises/ex-2.1" element={<EX2_1 />} />
+          <Route path="/exercises/ex-2.2" element={<EX2_2 />} />
+          <Route path="/exercises/ex-3.3" element={<EX3_3 />} />
+          <Route path="/exercises/ex-5" element={<EX5 />} />
+          <Route path="/stores/global" element={<Store />} />
+          <Route path="/stores/redux" element={<ReduxStore />} />
         </Routes>
       </div>
     </Router>

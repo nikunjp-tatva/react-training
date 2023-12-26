@@ -1,51 +1,110 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+
+const Nav = styled.nav`
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+  }
+
+  li {
+    position: relative;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content > a {
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #ffd700;
+  }
+
+  .active {
+    color: #ffd700;
+  }
+`;
 
 const NavBar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/functional">Functional Component</Link>
-        </li>
-        <li>
-          <Link to="/class">Class Component</Link>
-        </li>
-        <li>
-          <Link to="/state-props">State-Props</Link>
-        </li>
-        <li>
-          <Link to="/ex-5">Exercise</Link>
-        </li>
-        <li>
-          <Link to="/userDetails">User Details</Link>
-        </li>
-        <li>
-          <Link to="/ex-2.1">Exercise 2.1</Link>
-        </li>
-        <li>
-          <Link to="/form">Simple Form</Link>
-        </li>
-        <li>
-          <Link to="/ex-2.2">Exercise 2.2</Link>
-        </li>
-        <li>
-          <Link to="/global-store">Global Store</Link>
-        </li>
-        <li>
-          <Link to="/redux-store">Redux Store</Link>
-        <li>
-          <Link to="/ex-3.3">Exercise 3.3</Link>
-        </li>
-        </li>
-        <li>
-          <Link to="/higher-order-component">Higher Order Component</Link>
-        </li>
-      </ul>
-    </nav>
+    <Nav>
+      <nav>
+        <ul>
+          <li>
+            <NavLink exact to="/" activeClassName="active">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/state-props" activeClassName="active">State-Props</NavLink>
+          </li>
+          <li>
+            <NavLink to="/userDetails" activeClassName="active">User Details</NavLink>
+          </li>
+          <li>
+            <NavLink to="/form" activeClassName="active">Simple Form</NavLink>
+          </li>
+          <li className="dropdown">
+            <NavLink to="/components" activeClassName="active">Components</NavLink>
+            <div className="dropdown-content">
+              <NavLink to="/components/functional" activeClassName="active"> 
+                Functional <br />
+              </NavLink>
+              <NavLink to="/components/class" activeClassName="active">
+                Class <br />
+              </NavLink>
+              <NavLink to="/components/higher-order" activeClassName="active">Higher Order</NavLink>
+            </div>
+          </li>
+          <li className="dropdown">
+            <NavLink to="/exercises" activeClassName="active">Exercise</NavLink>
+            <div className="dropdown-content">
+              <NavLink to="/exercises/ex-2.1" activeClassName="active">
+                Exercise 2.1 <br />
+              </NavLink>
+              <NavLink to="/exercises/ex-2.2" activeClassName="active">
+                Exercise 2.2 <br />
+              </NavLink>
+              <NavLink to="/exercises/ex-3.3" activeClassName="active">
+                Exercise 3.3 <br />
+              </NavLink>
+              <NavLink to="/exercises/ex-5" activeClassName="active">Exercise 5</NavLink>
+            </div>
+          </li>
+          <li className="dropdown">
+            <NavLink to="/stores" activeClassName="active">Stores</NavLink>
+            <div className="dropdown-content">
+              <NavLink to="/stores/global" activeClassName="active">
+                Global Store <br />
+              </NavLink>
+              <NavLink to="/stores/redux" activeClassName="active">Redux Store</NavLink>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </Nav>
   );
 };
 

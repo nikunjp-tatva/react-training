@@ -1,0 +1,31 @@
+div.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 6 px; */
+}
+
+div.welcome-section h3 {
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.welcome-color {
+  color: #007bff;
+}
+
+div.welcome-section button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #f00000;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+div.welcome-section button:hover {
+  background-color: #d52929;
+  opacity: 80%;
+}
